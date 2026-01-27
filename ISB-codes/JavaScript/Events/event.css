@@ -1,0 +1,166 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  padding: 20px;
+  width: 100%;
+  font-family: "helvetica";
+}
+/* body{
+        overflow: hidden;
+        position: relative;
+      } */
+/* #a{
+        width: 250px;
+        height: 250px;
+        position: relative;
+        /* transition: all cubic-bezier(0.19, 1, 0.22, 1) .5s; */
+/* background-color: red;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+      }
+      #b{
+        cursor: pointer;
+        width: 150px;
+        height: 150px; */
+        /* background-color: violet;
+      } */
+/* a{
+        text-decoration: none;
+        font-size: 24px;
+        color: black;
+        background-color: yellow;
+        padding: 10px 20px;
+      } */
+/* #main {
+        padding: 30px;
+        width: 100%;
+        height: 100vh;
+        background-color: #222;
+      }
+h1{
+    font-size: 10rem;
+    font-weight: 300;
+    color: #555;
+    user-select: none;
+} */
+/* input {
+        display: block;
+      }
+#btn {
+    padding: 12px;
+    background-color: rgb(41, 143, 114);
+    color: white;
+    font-weight: 600;
+    border-radius: 30px;
+}
+#btn:hover {
+    cursor: pointer;
+    background-color: rgb(31, 113, 84);
+    scale: calc(1.1);
+}
+.card {
+    max-width: 300px;
+    height: auto;
+    color: #fff;
+    margin-top: 40px;
+    padding: 20px;
+    display: inline-block;
+    border: 2px solid #555;
+    border-radius: 10px;
+}
+      .profile {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-bottom: 8px;
+      }
+      .profile img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+      .card h3 {
+        font-weight: 600;
+        font-size: 20px;
+      }
+      .card h5 {
+        margin-top: 10px;
+        color: #aaa;
+        font-weight: 400;
+        font-size: 14px;
+      }
+      .card p {
+        font-size: 14px;
+        line-height: 1.5;
+        margin-top: 10px;
+      } */
+
+/* #main{
+    background-color: #222;
+    height: 100vh;
+    width: 100%;
+}
+#nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px;
+    padding: 20px;
+    background-color: #444;
+}
+#nav a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+#nav button{
+    padding: 12px 22px;
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    border-radius: 5px;
+}
+#nav button:hover{
+    background-color: #555;
+    color: white;
+} */
+
+/* .lt{
+    text-decoration: line-through;
+}
+li{
+    cursor: pointer;
+} */
+
+/* .a{
+    background-color: orange;
+    width: 80%;
+    height: 80%;
+}
+.b{
+    background-color: bisque;
+    width: 80%;
+    height: 80%;
+}
+.c{
+    background-color: lightpink;
+    width: 80%;
+    height: 80%;
+}
+button{
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: 500;
+    border: 1px solid indigo;
+    border-radius: 5px;
+} */
+
