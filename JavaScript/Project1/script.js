@@ -127,3 +127,5 @@ searchInput.addEventListener("input", debouncedSearch);
 // ---------------- INITIAL LOAD ----------------
 
 showUser(users);
+
+// This code is uploaded in gitHub
