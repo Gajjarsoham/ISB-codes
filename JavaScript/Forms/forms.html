@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <link rel="stylesheet" href="forms.css">
+</head>
+<body>
+    <!-- <form>
+        <input id="name" type="text" placeholder="name">
+        <div id="hide">
+            <br>
+            <small>your name should be greater than 2 characters</small>
+        </div>
+        <br><br>
+        <input id="email" type="email" placeholder="email">
+        <br><br>
+        <input id="password" type="password" placeholder="password">
+        <br><br>
+        <select>
+            <option value="male">male</option>
+            <option value="female">female</option>
+            <option value="other">other</option>
+        </select>
+        <br><br>
+        <textarea placeholder="Tell us about you..."></textarea>
+        <br><br>
+        <input type="submit">
+    </form> -->
+
+    <!-- practice form validation -->
+    <div class="container">
+    <h2>Login Validation</h2>
+
+    <form autocomplete="off" id="loginForm" novalidate>
+      
+      <!-- Email -->
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input 
+          type="text" 
+          id="email" 
+          placeholder="example@email.com"
+        />
+        <small class="error" id="emailError"></small>
+      </div>
+
+      <!-- Password -->
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input 
+          type="password" 
+          id="password" 
+          placeholder="Enter password"
+        />
+        <small class="error" id="passwordError"></small>
+      </div>
+
+      <!-- Submit -->
+      <button type="submit" id="submitBtn">Validate</button>
+
+      <!-- Success message -->
+      <p id="resultMsg"></p>
+
+    </form>
+  </div>
+
+    <script src="forms.js"></script>
+</body>
+</html>

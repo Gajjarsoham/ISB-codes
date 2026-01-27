@@ -1,0 +1,288 @@
+@font-face {
+  font-family: "logo";
+  src: url(./fonts/V8mQoQDjQSkFtoMM3T6r8E7mF71Q-gOoraIAEj7oUXskPMA.woff2)
+    format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: white;
+}
+
+.hero-wrapper {
+  min-height: 100vh;
+  background-image: url(./img/hero-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.site-header {
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+header {
+  display: flex;
+  height: 14vh;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5em 60px;
+  position: relative; /* IMPORTANT */
+  padding: 0 clamp(16px, 5vw, 48px);
+}
+
+header::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 7%;
+  width: 87%;
+  height: 1px;
+  background: #ffffff;
+}
+
+.logo {
+  height: 6vh;
+  width: auto;
+  margin-left: clamp(0px, 3vw, 40px);
+}
+
+.logo h1 {
+  font-size: clamp(1.2rem, 4vw, 2.5rem);
+  color: black;
+  font-family: "logo";
+}
+
+/* NAV */
+nav {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  margin-right: 28px;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  position: relative;
+  font-family: "logo";
+  font-size: 1.1rem;
+}
+
+.dropdown {
+  position: relative;
+}
+
+/* dropdown menu */
+.dropdown-menu {
+  position: absolute;
+  top: 110%;
+  left: 20px;
+  background-color: #dde9e9;
+  min-width: 180px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  border-radius: 6px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: 0.3s;
+  z-index: 99;
+  font-weight: li;
+}
+
+/* dropdown items */
+.dropdown-menu a {
+  display: block;
+  padding: 8px 15px;
+  font-size: 1rem;
+}
+.dropdown-menu a:hover {
+  color: white;
+  background: #0d6b68;
+  border-radius: 6px;
+}
+
+.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.dropdown:hover i {
+  transform: rotate(180deg);
+  transition: 0.3s;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+nav a:hover {
+  color: #0d6b68;
+}
+
+/* HAMBURGER */
+.menu-toggle {
+  display: none;
+  font-size: clamp(1.3rem, 5vw, 2.3rem);
+  cursor: pointer;
+}
+
+
+/* Main Hero content */
+
+.hero-container{
+  display: flex;
+  align-items: center;
+  min-height: calc(100vh - 90px);
+  color: #111;
+  font-family: "logo";
+}
+
+.hero-content{
+  padding: 30px;
+  flex: 1; 
+}
+.hero-content h1{
+  font-size: clamp(2rem, 5vw, 4rem);
+}
+.hero-content param{
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
+}
+
+.hero-img{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-img-bg{
+  background-color: #0d6b68;
+  height: 30vw;
+  width: 22vw;
+}
+
+.hero-img img{
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Small desktop / laptop (≤ 1199px) */
+@media (max-width: 1199px) {
+  nav {
+    gap: 1.5rem;
+  }
+
+  nav a {
+    font-size: 1rem;
+  }
+}
+
+/* Tablet & Mobile (≤ 991px) */
+@media (max-width: 991px) {
+  /* HEADER */
+  header {
+    padding: 0 clamp(16px, 4vw, 32px);
+  }
+
+  .logo h1 {
+    font-size: clamp(1.4rem, 5vw, 2rem);
+  }
+
+  /* NAV (slide-down menu) */
+  nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 20px;
+    display: none;
+  }
+  header::after {
+    display: none;
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  nav a {
+    font-size: 1rem;
+    left: 4vw;
+  }
+
+  /* DROPDOWN */
+  .dropdown-menu {
+    position: static;
+    box-shadow: none;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    display: none;
+    background: transparent;
+  }
+
+  .dropdown:hover .dropdown-menu {
+    display: none;
+  }
+
+  /* HAMBURGER */
+  .menu-toggle {
+    display: block;
+    font-size: 1.8rem;
+    margin-right: clamp(0px, 3vw, 40px);
+  }
+  .hero-container {
+    flex-direction: column;
+  }
+}
+
+/* Small phones (≤ 480px) */
+@media (max-width: 480px) {
+  header {
+    padding: 0 16px;
+  }
+
+  .logo h1 {
+    font-size: 1.6rem;
+  }
+
+  nav {
+    padding: 16px;
+  }
+
+  nav a {
+    font-size: 0.95rem;
+  }
+
+  .menu-toggle {
+    font-size: 1.6rem;
+  }
+  .hero-container {
+    flex-direction: column;
+  }
+}
