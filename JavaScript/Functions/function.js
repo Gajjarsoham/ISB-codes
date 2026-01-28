@@ -336,7 +336,7 @@
 // A new object is created
 // this points to that new object
 
-//////////// function cal() //////////////////
+//////////// function call() //////////////////
 // It can be used to invoke (call) a method with an object as an argument (parameter).
 // With call(), an object can use a method belonging to another object.
 // Invokes a function immediately
