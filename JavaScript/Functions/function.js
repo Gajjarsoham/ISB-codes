@@ -130,68 +130,6 @@
 // }
 // hey();
 
-///////////// closures (Important) ////////////
-// A closure is created when a function remembers the variables from its outer ////(lexical) scope, even after that outer function has finished executing.
-
-// function counter() {
-//   let count = 0;
-//   return function () {
-//     count++;
-//     console.log(count);
-//   };
-// }
-
-// const increment = counter();
-// increment(); // 1
-// increment(); // 2
-
-// function abcd () {
-//     let a = 12;
-//     return function() {
-//         console.log(a);
-//     }
-// }
-// abcd();
-
-// function outer() {
-//   let count = 0;
-//   function increment() {
-//     count++;
-//     console.log(count);
-//   }
-//   return increment;
-// }
-// const counter = outer();
-// counter(); // 1
-// counter(); // 2
-// counter(); // 3
-
-///////// lexical scoping ///////////
-// Inner functions can access outer variables
-
-// function outer() {
-//   let x = 10;
-//   function inner() {
-//     console.log(++x);
-//   }
-//   inner();
-// }
-// outer();
-
-// function abcd () {
-//     let a = 12;            // a start from here
-//     function efg () {
-//         let b = 20;          // b start from here
-//         console.log(++a);
-//         function hij () {
-//             let c = 30;          // c start from here
-//             console.log(++b);
-//         }                        // c ends from here
-//         hij();
-//     }                        // b ends from here
-//     efg();
-// }                          // a ends from here
-// abcd();
 
 ///////////// IIFE (Immediately Invoked Function Expressions) ////////////////
 // An IIFE is a JavaScript function that runs immediately after it is defined.

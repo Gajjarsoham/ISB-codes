@@ -4,10 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <!-- Toast Notification -->
+     <div class="parent fixed p-10 flex flex-col  gap-2">
+     </div>
+
+    <!-- <script>
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            const toastMessage = document.getElementById('toast-message');
+            
+            toastMessage.textContent = message;
+            toast.classList.remove('hidden');
+            
+            setTimeout(() => {
+                toast.classList.add('hidden');
+            }, 3000);
+        }
+
+        // Show toast on page load
+        window.addEventListener('load', () => {
+            showToast('Page loaded!');
+        });
+    </script> -->
+
     <script src="script.js"></script>
 </body>
 </html>
