@@ -102,7 +102,7 @@
 ////////// inheritance /////////////
 // Inheritance allows a class to acquire properties and methods of another class using extends or prototype chaining.
 
-// 1.
+// 1. Single Inheritance //
 // class Animal {
 //     constructor(name, species) {
 //         this.name = name;
@@ -126,33 +126,108 @@
 // console.log(dog1.breed); // Output: Golden Retriever
 
 // 2.
-class User {
-    constructor(name,address, username, email){
-        this.name = name;
-        this.address = address;
-        this.username = username;
-        this.email = email;
-        this.role = "user";
-    }
-    write (text){
-        let h1 = document.createElement("h1");
-        h1.textContent = `${this.name} : ${text}`;
-        document.body.appendChild(h1);
-    }
-class Admin extends User {
-    constructor(name, address, username, email){
-        super(name, address, username, email);
-        this.role = "admin";
-    }
+// class User {
+//     constructor(name,address, username, email){
+//         this.name = name;
+//         this.address = address;
+//         this.username = username;
+//         this.email = email;
+//         this.role = "user";
+//     }
+//     write (text){
+//         let h1 = document.createElement("h1");
+//         h1.textContent = `${this.name} : ${text}`;
+//         document.body.appendChild(h1);
+//     }
+// }
+// class Admin extends User {
+//     constructor(name, address, username, email){
+//         super(name, address, username, email);
+//         this.role = "admin";
+//     }
 
-    remove(){
-        document.body.querySelectorAll("h1").forEach((elem) => {
-            if(elem.textContent.includes(this.name)){
-                elem.remove();
-            }
-    })
-    }
-}
-let u1 = new User("Soham", "Mumbai", "soham123", "soham@example.com");
-let u2 = new User("Riya", "Delhi", "riya456", "riya@example.com");
-let a1 = new Admin("Admin1", "Bangalore", "admin1", "admin1@example.com");
+//     remove(){
+//         document.body.querySelectorAll("h1").forEach((elem) => {
+//             if(elem.textContent.includes(this.name)){
+//                 elem.remove();
+//             }
+//     })
+//     }
+// }
+// let u1 = new User("Soham", "Mumbai", "soham123", "soham@example.com");
+// let u2 = new User("Riya", "Delhi", "riya456", "riya@example.com");
+// let a1 = new Admin("Admin1", "Bangalore", "admin1", "admin1@example.com");
+
+
+// 3. Multilevel Inheritance //
+// Chain of inheritance.
+
+// class Animal {
+//   eat() {
+//     console.log("Eating...");
+//   }
+// }
+
+// class Mammal extends Animal {
+//   walk() {
+//     console.log("Walking...");
+//   }
+// }
+
+// class Dog extends Mammal {
+//   bark() {
+//     console.log("Barking...");
+//   }
+// }
+
+// const d = new Dog();
+// d.eat();
+// d.walk();
+// d.bark();
+
+
+// 4. Hierarchical Inheritance //
+// Multiple children from same parent.
+
+// class Animal {
+//   eat() {
+//     console.log("Eating...");
+//   }
+// }
+
+// class Dog extends Animal {
+//   bark() {
+//     console.log("Barking...");
+//   }
+// }
+
+// class Cat extends Animal {
+//   meow() {
+//     console.log("Meow...");
+//   }
+// }
+
+// const d = new Dog();
+// const c = new Cat();
+
+
+// 5. Multiple Inheritance Using Mixins //
+// const canFly = {
+//   fly() {
+//     console.log("Flying");
+//   }
+// };
+
+// const canSwim = {
+//   swim() {
+//     console.log("Swimming");
+//   }
+// };
+
+// class Bird {}
+
+// Object.assign(Bird.prototype, canFly, canSwim);
+
+// const b = new Bird();
+// b.fly();
+// b.swim();
