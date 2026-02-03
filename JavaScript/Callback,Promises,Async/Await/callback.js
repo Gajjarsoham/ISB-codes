@@ -1,3 +1,4 @@
+// date: 30/1/2026
 // 1. Synchronous
 // Synchronous = blocking
 // Each task waits for the previous task to finish.

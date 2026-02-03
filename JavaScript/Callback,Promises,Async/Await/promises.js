@@ -1,3 +1,4 @@
+// date: 30/1/2026
 // A Promise is an object that handles asynchronous results.
 // It represents a value that may be available now, later, or never.
 // A promise has 3 states:

@@ -1,3 +1,5 @@
+// date: 3/2/2026
+
 // Fetch API ////
 // The Fetch API is the modern way to make HTTP requests (GET, POST, PUT, DELETE…) from JavaScript to servers, APIs, or backend services.
 // It is the backbone of:
@@ -114,65 +116,106 @@
 // response.status
 // response.ok
 
+/// Status codes: ////
+// 1.
+// 1xx – Informational
+// Request received, continuing process
+// 100 → Continue
+// 101 → Switching Protocols
+
+// 2.
+// 2xx – Success
+// Request successfully processed
+// 200 → OK (Everything worked)
+// 201 → Created (New resource created)
+// 204 → No Content (Success but no data)
+
+// 3.
+// 3xx – Redirection
+// Request needs another action
+// 301 → Moved Permanently
+// 302 → Found (Temporary redirect)
+// 304 → Not Modified
+// Used mostly for caching and redirects.
+
+// 4.
+// 4xx – Client Errors
+// Problem from user/client side
+// 400 → Bad Request
+// 401 → Unauthorized
+// 403 → Forbidden
+// 404 → Not Found
+// 409 → Conflict
+
+// 5.
+// 5xx – Server Errors
+// Problem from server side
+// 500 → Internal Server Error
+// 502 → Bad Gateway
+// 503 → Service Unavailable
+// 504 → Gateway Timeout
+
+
+
 /// practice with html code
-function getUsers() {
-  fetch("https://randomuser.me/api/?results=3")
-    .then((raw) => raw.json())
-    .then((data) => {
-      document.querySelector(".users").innerHTML = "";
+// function getUsers() {
+//   fetch("https://randomuser.me/api/?results=3")
+//     .then((raw) => raw.json())
+//     .then((data) => {
+//       document.querySelector(".users").innerHTML = "";
 
-      data.results.forEach((user) => {
-        const card = document.createElement("div");
-        card.className =
-          "bg-[#C8553D] w-80 rounded-2xl shadow-lg p-6 text-center hover:scale-105 transition text-[#F4EBD0]";
+//       data.results.forEach((user) => {
+//         const card = document.createElement("div");
+//         card.className =
+//           "bg-[#C8553D] w-80 rounded-2xl shadow-lg p-6 text-center hover:scale-105 transition text-[#F4EBD0]";
 
-        const img = document.createElement("img");
-        img.src = user.picture.large;
-        img.className =
-          "w-24 h-24 mx-auto rounded-full border-4 border-[#D4A017]";
+//         const img = document.createElement("img");
+//         img.src = user.picture.large;
+//         img.className =
+//           "w-24 h-24 mx-auto rounded-full border-4 border-[#D4A017]";
 
-        const name = document.createElement("h2");
-        name.textContent = user.name.first + " " + user.name.last;
-        name.className = "text-xl font-semibold mt-4";
+//         const name = document.createElement("h2");
+//         name.textContent = user.name.first + " " + user.name.last;
+//         name.className = "text-xl font-semibold mt-4";
 
-        const age = document.createElement("p");
-        age.textContent = "Age: " + user.dob.age;
-        age.className = "text-[#F4EBD0]/80";
+//         const age = document.createElement("p");
+//         age.textContent = "Age: " + user.dob.age;
+//         age.className = "text-[#F4EBD0]/80";
 
-        const email = document.createElement("p");
-        email.textContent = "Email: " + user.email;
-        email.className = "text-sm mt-3";
+//         const email = document.createElement("p");
+//         email.textContent = "Email: " + user.email;
+//         email.className = "text-sm mt-3";
 
-        const btnBox = document.createElement("div");
-        btnBox.className = "flex gap-4 mt-5 justify-center";
+//         const btnBox = document.createElement("div");
+//         btnBox.className = "flex gap-4 mt-5 justify-center";
 
-        const followBtn = document.createElement("button");
-        followBtn.textContent = "Follow";
-        followBtn.className =
-          "bg-[#D4A017] text-[#4A2C2A] px-4 py-2 rounded-lg hover:bg-[#E9C46A]";
+//         const followBtn = document.createElement("button");
+//         followBtn.textContent = "Follow";
+//         followBtn.className =
+//           "bg-[#D4A017] text-[#4A2C2A] px-4 py-2 rounded-lg hover:bg-[#E9C46A]";
 
-        const msgBtn = document.createElement("button");
-        msgBtn.textContent = "Message";
-        msgBtn.className =
-          "border border-[#F4EBD0] px-4 py-2 rounded-lg hover:bg-[#6B8E23] hover:text-white";
+//         const msgBtn = document.createElement("button");
+//         msgBtn.textContent = "Message";
+//         msgBtn.className =
+//           "border border-[#F4EBD0] px-4 py-2 rounded-lg hover:bg-[#6B8E23] hover:text-white";
 
-        btnBox.appendChild(followBtn);
-        btnBox.appendChild(msgBtn);
+//         btnBox.appendChild(followBtn);
+//         btnBox.appendChild(msgBtn);
 
-        card.appendChild(img);
-        card.appendChild(name);
-        card.appendChild(age);
-        card.appendChild(email);
-        card.appendChild(btnBox);
+//         card.appendChild(img);
+//         card.appendChild(name);
+//         card.appendChild(age);
+//         card.appendChild(email);
+//         card.appendChild(btnBox);
 
-        document.querySelector(".users").appendChild(card);
-      });
-    })
-    .catch((err) => console.log(err));
-}
+//         document.querySelector(".users").appendChild(card);
+//       });
+//     })
+//     .catch((err) => console.log(err));
+// }
 
-getUsers();
+// getUsers();
 
-document.querySelector(".refreshBtn").addEventListener("click", function () {
-  getUsers();
-});
+// document.querySelector(".refreshBtn").addEventListener("click", function () {
+//   getUsers();
+// });
